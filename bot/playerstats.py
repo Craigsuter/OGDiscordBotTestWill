@@ -13,6 +13,7 @@ from dateutil.relativedelta import relativedelta
 from datetime import date
 import discord
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
 
 def csgoplayerstat(name):
   #Loading username / password for Liquipedia
@@ -43,6 +44,7 @@ def csgoplayerstat(name):
     actions = ActionChains(driver)
     actions.move_to_element(button).perform()
     button.send_keys(" ")
+    button.send_keys(Keys.BACKSPACE)
     button.send_keys(name)
     
     time.sleep(2)
