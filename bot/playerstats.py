@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup as soup
 from dateutil.relativedelta import relativedelta
 from datetime import date
 import discord
+from selenium.webdriver import ActionChains
 
 def csgoplayerstat(name):
   #Loading username / password for Liquipedia
@@ -39,6 +40,8 @@ def csgoplayerstat(name):
   #Finds the username box and types the username in
   try:
     button = driver.find_element_by_name("query")
+    actions = ActionChains(driver)
+    actions.move_to_element(button).perform()
     button.click()
     button.send_keys(name)
     
