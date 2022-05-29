@@ -342,7 +342,7 @@ async def on_message(message):
     messagereceived = messagetolower.lower()
     mention = f'<@!{client.user.id}>'
     #Checks for a ping of the bot
-    if ((mention in message.content) and (messagereceived[0] != '!')):
+    if (("<@825467569800347649>" in message.content) and (messagereceived[0] != '!')):
         await message.channel.send(
             "Im up! Im up! Are you okay... cool... co... <:OGmonkaThink:821509791523930162> "
         )
