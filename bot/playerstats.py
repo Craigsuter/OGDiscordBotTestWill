@@ -42,7 +42,7 @@ def csgoplayerstat(name):
     button = driver.find_element_by_name("query")
     actions = ActionChains(driver)
     actions.move_to_element(button).perform()
-    button.click()
+    button.send_keys(" ")
     button.send_keys(name)
     
     time.sleep(2)
