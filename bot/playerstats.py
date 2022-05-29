@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup as soup
 from dateutil.relativedelta import relativedelta
 from datetime import date
 import discord
-from selenium.webdriver import ActionChains
+from selenium.webdriver.common.action_chains import ActionChains
 
 def csgoplayerstat(name):
   #Loading username / password for Liquipedia
