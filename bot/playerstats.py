@@ -15,15 +15,16 @@ import discord
 
 def csgoplayerstat(name):
   #Loading username / password for Liquipedia
-  headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36(KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36'}
-
+  headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36(KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36'}
   chrome_options = webdriver.ChromeOptions()
   chrome_options.binary_location=os.environ.get("GOOGLE_CHROME_BIN")
-  chrome_options.add_argument("--headless")
+  chrome_options.add_argument("--headless") 
   chrome_options.add_argument("--disable-dev-shm-usage")
   chrome_options.add_argument("--no-sandbox")
-  chrome_options.add_argument("--window-size=1920,1080")
+  chrome_options.add_argument("--window-size=2560,1440")
+  user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.50 Safari/537.36'
+  chrome_options.add_argument(f'user-agent={user_agent}')
+
   # you need executable path for heroku (aka production) - but remove it for using replit 
   driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
   
