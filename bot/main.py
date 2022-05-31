@@ -342,7 +342,7 @@ async def on_message(message):
     messagereceived = messagetolower.lower()
     mention = f'<@!{client.user.id}>'
     #Checks for a ping of the bot
-    if (("<@825467569800347649>" in message.content) and (messagereceived[0] != '!')):
+    if ((mention in message.content) and (messagereceived[0] != '!')):
         await message.channel.send(
             "Im up! Im up! Are you okay... cool... co... <:OGmonkaThink:821509791523930162> "
         )
@@ -1394,13 +1394,7 @@ async def on_message(message):
                 end_time=time+datetime.timedelta(minutes=10)
                 
                 linetocheck = teams + "," + gamepos +"," +tourniname
-                try:
-                  download_file('/valoevent.txt', 'valoevent.txt')
-                  f=open('valoevent.txt', 'r')
-                  lines=f.readlines()
-                  f.close()
-                except:
-                  lines="empty"
+                lines="empty"
                 
                 try:
                   if lines[0] == linetocheck:
@@ -1468,13 +1462,7 @@ async def on_message(message):
                 
                 linetocheck = Teams+","+linktogame
 
-                try:
-                  download_file('/dotaevent.txt', 'dotaevent.txt')
-                  f=open('dotaevent.txt', 'r')
-                  lines=f.readlines()
-                  f.close()
-                except:
-                  lines="empty"
+                lines="empty"
 
                 try:
                   if lines[0] == linetocheck:
@@ -1519,13 +1507,7 @@ async def on_message(message):
                 description = tourniname + "\n" + streamdata + "\n:mega: https://twitter.com/OGcsgo\n"
                 
                 linetocheck= teams+","+gamepage
-                try:
-                  download_file('/csgoevent.txt', 'csgoevent.txt')
-                  f=open('csgoevent.txt', 'r')
-                  lines=f.readlines()
-                  f.close()
-                except:
-                  lines= "empty"
+                lines= "empty"
 
                 try:
                 
