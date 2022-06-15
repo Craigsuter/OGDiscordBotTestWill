@@ -4504,6 +4504,7 @@ async def testingspam():
     #Dota daily
     try:
       channel = client.get_channel(964298402089275462)
+      channel2 = client.get_channel(973130064667484170)
       value = DotaCheck(0)
       Teams = value[1]
       name = "Dota 2 game: " + Teams
@@ -4549,6 +4550,7 @@ async def testingspam():
           upload_file('/dotaevent.txt', 'dotaevent.txt')
           data2= await guild.fetch_scheduled_event(eventdata.id)
           await channel.send(data2.url)
+          await channel2.send(str(gardenerinfo))
           
       except:
         eventdata = await guild.create_scheduled_event(name=name, description=description, start_time=time, end_time=end_time, entity_type=discord.enums.EntityType(3), location=linktogame)
@@ -4558,6 +4560,7 @@ async def testingspam():
         upload_file('/dotaevent.txt', 'dotaevent.txt')
         data2= await guild.fetch_scheduled_event(eventdata.id)
         await channel.send(data2.url)
+        await channel2.send(str(gardenerinfo))
         pass
 
       
