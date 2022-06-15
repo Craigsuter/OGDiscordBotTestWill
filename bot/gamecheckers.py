@@ -506,6 +506,10 @@ def ValoCheck(channelDataID, pageURL):
       tabledata2 = page_soup2.findAll("div", {"class":"match-header-event-series"})
       gameposition = tabledata2[0].text.strip()
       gameposition = gameposition.replace("\t", "").replace("\n","")
+      serieslength = page_soup2.findAll("div", {"class": "match-header-vs-note"})
+      serieslength = serieslength[1].text.strip()
+      serieslength = serieslength.replace(" ", "")
+     
       
       
     except:
@@ -519,6 +523,8 @@ def ValoCheck(channelDataID, pageURL):
       uClient.close()
       page_soup3 = soup(page_html3, "html.parser")
 
+      
+      
       tabledata3 = page_soup2.findAll("div", {"style":"font-weight: 700;"})
       tourniname = tabledata3[0].text.replace("\n","").replace("\t","")
          
@@ -616,7 +622,7 @@ def ValoCheck(channelDataID, pageURL):
             embed.add_field(name="Links", value="[OG LDN UTD VLR](https://www.vlr.gg/team/8903/og-ldn-utd) / [OG LDN UTD Valorant Liquipedia](https://liquipedia.net/valorant/OG_LDN_UTD)", inline=False)
         
     #return(embed)
-    return (embed, valorantTeams, valorantTeamTime, c, matchlink, dayofgame2, gameposition, tourniname)
+    return (embed, valorantTeams, valorantTeamTime, c, matchlink, dayofgame2, gameposition, tourniname, serieslength, epoch)
 
   except Exception as e:
     print(exc_type, fname, exc_tb.tb_lineno)

@@ -4558,6 +4558,7 @@ async def testingspam():
     #Valo daily - regular OG
     try:
       channel = client.get_channel(964298835453169664)
+      channel2 = client.get_channel(973130064667484170)
       value = ValoCheck(0, 'https://www.vlr.gg/team/2965/og')
       teams = value[1]
       time = datetime.datetime.now().astimezone() + value[3]
@@ -4565,6 +4566,17 @@ async def testingspam():
       linktogame = value[4]
       linktogame = "https://www.vlr.gg/team/2965/og"
       gamepos = value[6]
+      serieslength = value[8]
+      epoch = value[9]
+      if(serieslength == "Bo1"):
+        cover=2
+      if(serieslength == "Bo2"):
+        cover =3
+      if(serieslength=="Bo3"):
+        cover=4
+      if(serieslength=="Bo5"):
+        cover="Determined by series length"
+      gardenerinfo = "Hey <@720253636797530203>\n\nI need up to two moderators to work today's" +  teams + " , at <t:" + str(epoch) + ">\n\nPlease react below with a :OGpeepoYes: to sign up!\n\n As this is a" + str(serieslength) +", you will be able to add" + str(cover) +" two hours of work to your invoice for the month."
       name= "Valorant game: " + teams
       tourniname = value[7]
       description = tourniname + "\n" + str(value[4]) + "\n" + gamepos + "\n" + streaminfo[1] + "\n:mega: https://twitter.com/OGvalorant\n" 
@@ -4591,6 +4603,7 @@ async def testingspam():
           upload_file('/valoevent.txt', 'valoevent.txt')
           data2= await guild.fetch_scheduled_event(eventdata.id)
           await channel.send(data2.url)
+          await channel2.send(str(gardenerinfo))
           
       except:
         eventdata = await guild.create_scheduled_event(name=name, description=description, start_time=time, end_time=end_time, entity_type=discord.enums.EntityType(3), location=linktogame)
@@ -4600,6 +4613,7 @@ async def testingspam():
         upload_file('/valoevent.txt', 'valoevent.txt')
         data2= await guild.fetch_scheduled_event(eventdata.id)
         await channel.send(data2.url)
+        await channel2.send(str(gardenerinfo))
         pass
 
       
@@ -4610,6 +4624,7 @@ async def testingspam():
     #Get events for ldn utd OG
     try:
       channel = client.get_channel(964298835453169664)
+      channel2 = client.get_channel(973130064667484170)
       value = ValoCheck(0, 'https://www.vlr.gg/team/8903/og-ldn-utd')
       teams = value[1]
       time = datetime.datetime.now().astimezone() + value[3]
@@ -4619,6 +4634,17 @@ async def testingspam():
       gamepos = value[6]
       name= "Valorant game: " + teams
       tourniname = value[7]
+      serieslength = value[8]
+      epoch = value[9]
+      if(serieslength == "Bo1"):
+        cover=2
+      if(serieslength == "Bo2"):
+        cover =3
+      if(serieslength=="Bo3"):
+        cover=4
+      if(serieslength=="Bo5"):
+        cover="Determined by series length"
+      gardenerinfo = "Hey <@720253636797530203>\n\nI need up to two moderators to work today's" +  teams + " , at <t:" + str(epoch) + ">\n\nPlease react below with a :OGpeepoYes: to sign up!\n\n As this is a" + str(serieslength) +", you will be able to add" + str(cover) +" two hours of work to your invoice for the month."
       description = tourniname + "\n" + str(value[4]) + "\n" + gamepos + "\n" + streaminfo[1] + "\n:mega: https://twitter.com/OGvalorant\n" 
       end_time=time+datetime.timedelta(minutes=10)
       guild = client.get_guild(689865753662455829)
@@ -4643,6 +4669,8 @@ async def testingspam():
           upload_file('/ldnvaloevent.txt', 'ldnvaloevent.txt')
           data2= await guild.fetch_scheduled_event(eventdata.id)
           await channel.send(data2.url)
+          await channel2.send(str(gardenerinfo))
+                              
           
       except:
         eventdata = await guild.create_scheduled_event(name=name, description=description, start_time=time, end_time=end_time, entity_type=discord.enums.EntityType(3), location=linktogame)
@@ -4652,6 +4680,7 @@ async def testingspam():
         upload_file('/ldnvaloevent.txt', 'ldnvaloevent.txt')
         data2= await guild.fetch_scheduled_event(eventdata.id)
         await channel.send(data2.url)
+        await channel2.send(str(gardenerinfo))
         pass
 
       
