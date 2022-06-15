@@ -4511,12 +4511,23 @@ async def testingspam():
       end_time=time+datetime.timedelta(minutes=10)
       linktogame = value[7]
       tourniname = value[6]
+      serieslength=value[8]
+      epoch=value[9]
       streaminfo = DotaStreams()
+      if(serieslength == "Bo1"):
+        cover=2
+      if(serieslength == "Bo2"):
+        cover =3
+      if(serieslength=="Bo3"):
+        cover=4
+      if(serieslength=="Bo5"):
+        cover="Determined by series length"
       
       flagMessage = streaminfo[2]
       description = tourniname +"\n" + flagMessage + "\n:mega: https://twitter.com/OGesports\n"
       guild = client.get_guild(689865753662455829)
       linetocheck = Teams+","+linktogame
+      gardenerinfo = "Hey <@&720253636797530203>\n\nI need up to four moderators to work the Dota game - " +  Teams + " , at <t:" + str(epoch) + ">\n\nPlease react below with a <:OGpeepoYes:730890894814740541> to sign up!\n\nAs this is a " + str(serieslength) +", you will be able to add " + str(cover) +" hours of work to your invoice for the month."
 
       try:
         download_file('/dotaevent.txt', 'dotaevent.txt')

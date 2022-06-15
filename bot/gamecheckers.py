@@ -56,6 +56,10 @@ def DotaCheck(channelDataID):
           "span", {"class": "team-template-team-short"})
       containers3 = page_soup2.findAll(
           "span", {"class": "timer-object timer-object-countdown-only"})
+      containers4 = page_soup2.findAll("div", {"style" : "font-size:75%; padding-bottom:2px"})
+      serieslength= containers4[0].text
+      serieslength = serieslength[1:-1]
+      
 
       try:
         v_table = page_soup2.find("table", attrs={"class": "wikitable wikitable-striped infobox_matches_content"})
@@ -200,7 +204,7 @@ def DotaCheck(channelDataID):
         embed.add_field(name="Notice",value="Please check Liquipedia by clicking the title of this embed for more information as the time might not be accurate", inline=False)
         embed.add_field(name="Links", value=links, inline=False)
 
-      return(embed, Teams,nextgametime, c, links,dayofgame2, tourniname, extendedURL)
+      return(embed, Teams,nextgametime, c, links,dayofgame2, tourniname, extendedURL, serieslength, epoch)
 
 
 
