@@ -4576,7 +4576,7 @@ async def testingspam():
         cover=4
       if(serieslength=="Bo5"):
         cover="Determined by series length"
-      gardenerinfo = "Hey <@&720253636797530203>\n\nI need up to two moderators to work today's" +  teams + " , at <t:" + str(epoch) + ">\n\nPlease react below with a <:OGpeepoYes:730890894814740541> to sign up!\n\n As this is a " + str(serieslength) +", you will be able to add " + str(cover) +" hours of work to your invoice for the month."
+      gardenerinfo = "Hey <@&720253636797530203>\n\nI need up to two moderators to work the Valorant game - " +  teams + " , at <t:" + str(epoch) + ">\n\nPlease react below with a <:OGpeepoYes:730890894814740541> to sign up!\n\nAs this is a " + str(serieslength) +", you will be able to add " + str(cover) +" hours of work to your invoice for the month."
       name= "Valorant game: " + teams
       tourniname = value[7]
       description = tourniname + "\n" + str(value[4]) + "\n" + gamepos + "\n" + streaminfo[1] + "\n:mega: https://twitter.com/OGvalorant\n" 
@@ -4644,7 +4644,7 @@ async def testingspam():
         cover=4
       if(serieslength=="Bo5"):
         cover="Determined by series length"
-      gardenerinfo = "Hey <@&720253636797530203>\n\nI need up to two moderators to work today's" +  teams + " , at <t:" + str(epoch) + ">\n\nPlease react below with a <:OGpeepoYes:730890894814740541> to sign up!\n\n As this is a " + str(serieslength) +", you will be able to add " + str(cover) +" hours of work to your invoice for the month."
+      gardenerinfo = "Hey <@&720253636797530203>\n\nI need up to two moderators to work the Valorant game - " +  teams + " , at <t:" + str(epoch) + ">\n\nPlease react below with a <:OGpeepoYes:730890894814740541> to sign up!\n\nAs this is a " + str(serieslength) +", you will be able to add " + str(cover) +" hours of work to your invoice for the month."
       description = tourniname + "\n" + str(value[4]) + "\n" + gamepos + "\n" + streaminfo[1] + "\n:mega: https://twitter.com/OGvalorant\n" 
       end_time=time+datetime.timedelta(minutes=10)
       guild = client.get_guild(689865753662455829)
