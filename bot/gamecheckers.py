@@ -245,8 +245,13 @@ def CSGOCheck(channelDataID, page):
     #Load the page of the match
     page_soup = soup(r.text, "html.parser")
     test = page_soup.findAll("div", {"class":"teamName"})
+    test2 = page_soup.findAll("div", {"class": "padding preformatted-text"})
     team1= test[0].text
     team2 = test[1].text
+    serieslength = test2[0].text
+    serieslength = serieslength.rsplit(" ")
+    serieslength = serieslength[2]
+    
     
     #Grab time / date
     test2 = page_soup.findAll("div", {"class":"time"})
@@ -376,10 +381,10 @@ def CSGOCheck(channelDataID, page):
         embed.add_field(name="Links", value="[OG Academy Liquipedia](https://liquipedia.net/counterstrike/OG_Academy)\n[OG CSGO Academy HLTV](https://www.hltv.org/team/11672/og-academy#tab-matchesBox)\n[Game page](" + matchlink +")\n[Tournament](" + link4tourni+")", inline=False)
         
     if timetoadd >0:
-      return(teams, timeofgame, datep3, time2, matchlink, link4tourni, embed, timetoadd, tourniname)
+      return(teams, timeofgame, datep3, time2, matchlink, link4tourni, embed, timetoadd, tourniname, serieslength, test)
     else:
       timetoadd=0
-      return(teams, timeofgame, datep3, time2, matchlink, link4tourni, embed, timetoadd, tourniname)
+      return(teams, timeofgame, datep3, time2, matchlink, link4tourni, embed, timetoadd, tourniname, serieslength, test)
 
 
 

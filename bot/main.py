@@ -4706,10 +4706,13 @@ async def testingspam():
   #csgoacad
     try:
       channel = client.get_channel(964298754968649748)
+      channel2 = client.get_channel(973130064667484170)
       value = CSGOCheck(0, 'https://www.hltv.org/team/11672/og-academy#tab-matchesBox')
       teams = value[0]
       gamepage = value[4]
       tourniname = value[8]
+      serieslength = value[9]
+      epoch = value[10]
       name = "OG CSGO Academy game: " + teams
       time=datetime.datetime.now().astimezone() + datetime.timedelta(seconds=int(value[7]))
       end_time = time+datetime.timedelta(minutes=10)
@@ -4718,6 +4721,20 @@ async def testingspam():
       description = tourniname + "\n" + streamdata + "\n:mega: https://twitter.com/OGcsgo\n"
       guild = client.get_guild(689865753662455829)
       linetocheck= teams+","+gamepage
+
+      if(str(serieslength) == "1"):
+        cover=2
+      if(str(serieslength) == "2"):
+        cover =3
+      if(str(serieslength)=="3"):
+        cover=4
+      if(str(serieslength)=="5"):
+        cover="Determined by series length"
+
+      gardenerinfo = "Hey <@&720253636797530203>\n\nI need up to two moderators to work the OG CSGO Academy - " +  teams + " , at <t:" + str(epoch) + ">\n\nPlease react below with a <:OGpeepoYes:730890894814740541> to sign up!\n\nAs this is a Bo" + str(serieslength) +", you will be able to add " + str(cover) +" hours of work to your invoice for the month."
+
+
+      
       try:
         download_file('/csgoaevent.txt', 'csgoaevent.txt')
         f=open('csgoaevent.txt', 'r')
@@ -4766,10 +4783,13 @@ async def testingspam():
 #CSGO daily
     try:
       channel = client.get_channel(964298754968649748)
+      channel2 = client.get_channel(973130064667484170)
       value = CSGOCheck(0, 'https://www.hltv.org/team/10503/og#tab-matchesBox')
       teams = value[0]
       gamepage = value[4]
       tourniname = value[8]
+      serieslength = value[9]
+      epoch = value[10]
       name = "CSGO game: " + teams
       time=datetime.datetime.now().astimezone() + datetime.timedelta(seconds=int(value[7]))
       end_time = time+datetime.timedelta(minutes=10)
@@ -4778,6 +4798,18 @@ async def testingspam():
       description = tourniname + "\n" + streamdata + "\n:mega: https://twitter.com/OGcsgo\n"
       guild = client.get_guild(689865753662455829)
       linetocheck= teams+","+gamepage
+
+
+      if(str(serieslength) == "1"):
+        cover=2
+      if(str(serieslength) == "2"):
+        cover =3
+      if(str(serieslength)=="3"):
+        cover=4
+      if(str(serieslength)=="5"):
+        cover="Determined by series length"
+
+      gardenerinfo = "Hey <@&720253636797530203>\n\nI need up to three moderators to work the OG CSGO - " +  teams + " , at <t:" + str(epoch) + ">\n\nPlease react below with a <:OGpeepoYes:730890894814740541> to sign up!\n\nAs this is a Bo" + str(serieslength) +", you will be able to add " + str(cover) +" hours of work to your invoice for the month."
       try:
         download_file('/csgoevent.txt', 'csgoevent.txt')
         f=open('csgoevent.txt', 'r')
@@ -4798,6 +4830,7 @@ async def testingspam():
           upload_file('/csgoevent.txt', 'csgoevent.txt')
           data2= await guild.fetch_scheduled_event(eventdata.id)
           await channel.send(data2.url)
+          await channel2.send(str(gardenerinfo))
           
       except:
         eventdata = await guild.create_scheduled_event(name=name, description=description, start_time=time, end_time=end_time, entity_type=discord.enums.EntityType(3), location=gamepage)
@@ -4807,6 +4840,7 @@ async def testingspam():
         upload_file('/csgoevent.txt', 'csgoevent.txt')
         data2= await guild.fetch_scheduled_event(eventdata.id)
         await channel.send(data2.url)
+        await channel2.send(str(gardenerinfo))
         pass
 
         
