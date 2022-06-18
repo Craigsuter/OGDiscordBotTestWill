@@ -4820,7 +4820,7 @@ async def testingspam():
 
       try:
         counter = teams.count('/')
-        if lines[0] == linetocheck or teams == "FaZe vs OG" or counter > 0:
+        if lines[0] == linetocheck or counter > 0:
           pass
         else:
           eventdata = await guild.create_scheduled_event(name=name, description=description, start_time=time, end_time=end_time, entity_type=discord.enums.EntityType(3), location=gamepage)
