@@ -1,5 +1,7 @@
 import discord
+import requests
 import os
+
 #import pynacl
 #import dnspython
 import server
@@ -21,6 +23,7 @@ from time import strptime
 import asyncio
 import youtube_dl
 import time
+from time import sleep
 from apscheduler.triggers.cron import CronTrigger
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from translation import translations
@@ -354,6 +357,23 @@ async def on_message(message):
 
     #Verifies that message is command usage
     if (first_char == "!"):
+        if (messagereceived == "!lights" and message.author.id == 183707605032501248):
+          requests.post("https://maker.ifttt.com/trigger/turnonlightpython/json/with/key/RMPSc0N6vgM3JKUdSpbbc")
+          
+        if (messagereceived =="!rave" and message.author.id == 183707605032501248):
+          i=0
+          webhookkey= 'webhookkey'
+          while(i < 50):
+            requests.post(f'https://maker.ifttt.com/trigger/lightpurple/json/with/key/{webhookkey}')
+            sleep(.2)
+            requests.post(f'https://maker.ifttt.com/trigger/lightorange/json/with/key/{webhookkey}')
+            sleep(.2)
+            requests.post(f'https://maker.ifttt.com/trigger/lightgreen/json/with/key/{webhookkey}')
+            sleep(.2)
+            requests.post(f'https://maker.ifttt.com/trigger/lightblue/json/with/key/{webhookkey}')
+            sleep(.2)
+            i=i+1
+          
 
         if (messagereceived == "!csmaps"):
             maps = csgomap()
