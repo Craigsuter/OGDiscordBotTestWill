@@ -602,7 +602,8 @@ def ValoCheck(channelDataID, pageURL):
                       or (channelDataID == 818793950965006357)
                       or (channelDataID == 972571026066141204)
                       or (channelDataID == 972946124161835078)
-                      or (channelDataID == 972570634196512798)):
+                      or (channelDataID == 972570634196512798)
+                      or (channelDataID == 955467886200233984)):
       c= str(c)
       embed = valorantTeams + " - Starts in: " + c  + " / In your local time: <t:" + str(epoch) + "> - For more information use !nextvalo / !nextldnvalo in <#721391448812945480>"
       
