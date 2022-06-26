@@ -3520,6 +3520,23 @@ async def on_message(message):
                 except:
                     await message.channel.send("CS0-1 not found")
 
+            if ((messagereceived == "!deletecsgoabo1")
+                    or (messagereceived == "!deletecsagobo1")):
+                guild = message.guild
+                try:
+                    role_object = discord.utils.get(guild.roles, name="CSA1-0")
+                    await role_object.delete()
+                    await message.channel.send("CSA1-0 deleted")
+                except:
+                    await message.channel.send("CSA1-0 not found")
+
+                try:
+                    role_object = discord.utils.get(guild.roles, name="CSA0-1")
+                    await role_object.delete()
+                    await message.channel.send("CSA0-1 deleted")
+                except:
+                    await message.channel.send("CSA0-1 not found")
+
             if ((messagereceived == "!deletevalobo1")
                     or (messagereceived == "!deletevalorantbo1")):
                 guild = message.guild
@@ -3616,6 +3633,38 @@ async def on_message(message):
                 except:
                     await message.channel.send("CS0-2 not found")
 
+
+            if ((messagereceived == "!deletecsgoabo3")
+                    or (messagereceived == "!deletecsabo3")):
+                guild = message.guild
+                try:
+                    role_object = discord.utils.get(guild.roles, name="CSA2-0")
+                    await role_object.delete()
+                    await message.channel.send("CSA2-0 deleted")
+                except:
+                    await message.channel.send("CSA2-0 not found")
+
+                try:
+                    role_object = discord.utils.get(guild.roles, name="CSA2-1")
+                    await role_object.delete()
+                    await message.channel.send("CSA2-1 deleted")
+                except:
+                    await message.channel.send("CSA2-1 not found")
+
+                try:
+                    role_object = discord.utils.get(guild.roles, name="CSA1-2")
+                    await role_object.delete()
+                    await message.channel.send("CSA1-2 deleted")
+                except:
+                    await message.channel.send("CSA1-2 not found")
+
+                try:
+                    role_object = discord.utils.get(guild.roles, name="CSA0-2")
+                    await role_object.delete()
+                    await message.channel.send("CSA0-2 deleted")
+                except:
+                    await message.channel.send("CSA0-2 not found")
+                  
             if ((messagereceived == "!deletevalobo3")
                     or (messagereceived == "!deletevalorantbo3")):
                 guild = message.guild
@@ -3769,6 +3818,52 @@ async def on_message(message):
                 except:
                     await message.channel.send("CS0-3 not found")
 
+
+            if ((messagereceived == "!deletecsgoabo5")
+                    or (messagereceived == "!deletecsabo5")):
+                guild = message.guild
+                try:
+                    role_object = discord.utils.get(guild.roles, name="CSA3-0")
+                    await role_object.delete()
+                    await message.channel.send("CSA3-0 deleted")
+                except:
+                    await message.channel.send("CSA3-0 not found")
+
+                try:
+                    role_object = discord.utils.get(guild.roles, name="CSA3-1")
+                    await role_object.delete()
+                    await message.channel.send("CSA3-1 deleted")
+                except:
+                    await message.channel.send("CSA3-1 not found")
+
+                try:
+                    role_object = discord.utils.get(guild.roles, name="CSA3-2")
+                    await role_object.delete()
+                    await message.channel.send("CSA3-2 deleted")
+                except:
+                    await message.channel.send("CSA3-2 not found")
+
+                try:
+                    role_object = discord.utils.get(guild.roles, name="CSA2-3")
+                    await role_object.delete()
+                    await message.channel.send("CSA2-3 deleted")
+                except:
+                    await message.channel.send("CSA2-3 not found")
+
+                try:
+                    role_object = discord.utils.get(guild.roles, name="CSA1-3")
+                    await role_object.delete()
+                    await message.channel.send("CSA1-3 deleted")
+                except:
+                    await message.channel.send("CSA1-3 not found")
+
+                try:
+                    role_object = discord.utils.get(guild.roles, name="CSA0-3")
+                    await role_object.delete()
+                    await message.channel.send("CSA0-3 deleted")
+                except:
+                    await message.channel.send("CSA0-3 not found")
+
             if ((messagereceived == "!deletevalobo5")
                     or (messagereceived == "!deletevalorantbo5")):
                 guild = message.guild
@@ -3908,6 +4003,29 @@ async def on_message(message):
                     await message.channel.send("CS0-2 deleted")
                 except:
                     await message.channel.send("CS0-2 not found")
+            if ((messagereceived == "!deletecsgoabo2")
+                    or (messagereceived == "!deletecsgoabo2")):
+                guild = message.guild
+                try:
+                    role_object = discord.utils.get(guild.roles, name="CSA2-0")
+                    await role_object.delete()
+                    await message.channel.send("CSA2-0 deleted")
+                except:
+                    await message.channel.send("CSA2-0 not found")
+
+                try:
+                    role_object = discord.utils.get(guild.roles, name="CSA1-1")
+                    await role_object.delete()
+                    await message.channel.send("CSA1-1 deleted")
+                except:
+                    await message.channel.send("CSA1-1 not found")
+
+                try:
+                    role_object = discord.utils.get(guild.roles, name="CSA0-2")
+                    await role_object.delete()
+                    await message.channel.send("CSA0-2 deleted")
+                except:
+                    await message.channel.send("CSA0-2 not found")
 
             if ((messagereceived == "!deletevalobo2")
                     or (messagereceived == "!deletevalorantbo2")):
