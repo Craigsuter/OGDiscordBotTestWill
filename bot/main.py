@@ -4818,6 +4818,7 @@ async def testingspam():
           upload_file('/csgoaevent.txt', 'csgoaevent.txt')
           data2= await guild.fetch_scheduled_event(eventdata.id)
           await channel.send(data2.url)
+          await channel2.send(str(gardenerinfo))
           
       except:
         try:
@@ -4830,6 +4831,7 @@ async def testingspam():
         upload_file('/csgoaevent.txt', 'csgoaevent.txt')
         data2= await guild.fetch_scheduled_event(eventdata.id)
         await channel.send(data2.url)
+        await channel2.send(str(gardenerinfo))
         pass
 
         
