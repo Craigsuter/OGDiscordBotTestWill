@@ -4130,6 +4130,15 @@ async def on_message(message):
                 await guild.create_role(name="CS0-2")
                 await message.channel.send("CS0-2 created")
 
+            if (messagereceived == "!csgoabo2"):
+                guild = message.guild
+                await guild.create_role(name="CSA2-0")
+                await message.channel.send("CSA2-0 created")
+                await guild.create_role(name="CSA1-1")
+                await message.channel.send("CSA1-1 created")
+                await guild.create_role(name="CSA0-2")
+                await message.channel.send("CSA0-2 created")
+
             if (messagereceived == "!dotabo5"):
                 guild = message.guild
                 await guild.create_role(name="D3-0")
@@ -4152,6 +4161,13 @@ async def on_message(message):
                 await guild.create_role(name="CS0-1")
                 await message.channel.send("CS0-1 created")
 
+            if (messagereceived == "!csgoabo1"):
+                guild = message.guild
+                await guild.create_role(name="CSA1-0")
+                await message.channel.send("CSA1-0 created")
+                await guild.create_role(name="CSA0-1")
+                await message.channel.send("CSA0-1 created")
+
             if (messagereceived == "!csgobo3"):
                 guild = message.guild
                 await guild.create_role(name="CS2-0")
@@ -4162,6 +4178,33 @@ async def on_message(message):
                 await message.channel.send("CS1-2 created")
                 await guild.create_role(name="CS0-2")
                 await message.channel.send("CS0-2 created")
+
+
+            if (messagereceived == "!csgoabo3"):
+                guild = message.guild
+                await guild.create_role(name="CSA2-0")
+                await message.channel.send("CSA2-0 created")
+                await guild.create_role(name="CSA2-1")
+                await message.channel.send("CSA2-1created")
+                await guild.create_role(name="CSA1-2")
+                await message.channel.send("CSA1-2 created")
+                await guild.create_role(name="CSA0-2")
+                await message.channel.send("CSA0-2 created")
+
+            if (messagereceived == "!csgoabo5"):
+                guild = message.guild
+                await guild.create_role(name="CSA3-0")
+                await message.channel.send("CSA3-0 created")
+                await guild.create_role(name="CSA3-1")
+                await message.channel.send("CSA3-1 created")
+                await guild.create_role(name="CSA3-2")
+                await message.channel.send("CSA3-2 created")
+                await guild.create_role(name="CSA2-3")
+                await message.channel.send("CSA2-3 created")
+                await guild.create_role(name="CSA1-3")
+                await message.channel.send("CSA1-3 created")
+                await guild.create_role(name="CSA0-3")
+                await message.channel.send("CSA0-3 created")
 
             if (messagereceived == "!csgobo5"):
                 guild = message.guild
