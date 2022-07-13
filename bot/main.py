@@ -786,7 +786,7 @@ async def on_message(message):
                 or (messagereceived == "!nextvalorant")
                 or (messagereceived == "!nextval")):
             try:
-              embed = ValoCheck(channelDataID, 'https://www.vlr.gg/team/2965/og')
+              embed = ValoCheck(channelDataID, 'https://www.vlr.gg/team/8903/og-ldn-utd')
               embed=embed[0]
               #embed = embed[
   
@@ -798,8 +798,7 @@ async def on_message(message):
                         or (channelDataID == 818793950965006357)
                         or (channelDataID == 972571026066141204)
                         or (channelDataID == 972946124161835078)
-                        or (channelDataID == 972570634196512798)
-                        or (channelDataID == 955467886200233984)):
+                        or (channelDataID == 972570634196512798)):
                       userID = message.author.id
                       userID = str(userID)
                       await message.reply(
@@ -808,8 +807,8 @@ async def on_message(message):
                       )
                   else:
                       embed = discord.Embed(
-                          title="OG Valorant's next game",
-                          url="https://www.vlr.gg/team/2965/og",
+                          title="OG LDN Valorant's next game",
+                          url="https://www.vlr.gg/team/8903/og-ldn-utd",
                           color=0xd57280)
                       embed.set_thumbnail(
                           url=
@@ -821,7 +820,7 @@ async def on_message(message):
                       embed.add_field(
                           name="Links",
                           value=
-                          "[OG VLR](https://www.vlr.gg/team/2965/og) / [OG Valrant Liquipedia](https://liquipedia.net/valorant/OG)",
+                          "[OG LDN VLR](https://www.vlr.gg/team/8903/og-ldn-utd) / [OG LDN Valrant Liquipedia](https://liquipedia.net/valorant/OG_LDN_UTD)",
                           inline=False)
                       await message.reply(embed=embed)
               else:
@@ -832,8 +831,7 @@ async def on_message(message):
                         or (channelDataID == 818793950965006357)
                         or (channelDataID == 972571026066141204)
                         or (channelDataID == 972946124161835078)
-                        or (channelDataID == 972570634196512798)
-                        or (channelDataID == 955467886200233984)):
+                        or (channelDataID == 972570634196512798)):
                       userID = message.author.id
                       userID = str(userID)
                       await message.reply("<@" + userID + "> " + embed)
@@ -853,10 +851,10 @@ async def on_message(message):
                         or (channelDataID == 955467886200233984)):
                 await message.reply("<@" + userID + "> - No games planned currently - For more information use !nextvalo in <#721391448812945480>")
               else:
-                    embed = discord.Embed(title="OG Valorant's next game",url="https://www.vlr.gg/team/2965/og",color=0xd57280)
+                    embed = discord.Embed(title="OG LDN Valorant's next game",url="https://www.vlr.gg/team/8903/og-ldn-utd",color=0xd57280)
                     embed.set_thumbnail(url="https://liquipedia.net/commons/images/thumb/0/00/OG_RB_Logo.png/600px-OG_RB_Logo.png")
                     embed.add_field(name="No games planned",value="No games planned",inline=True)
-                    embed.add_field(name="Links",value="[OG VLR](https://www.vlr.gg/team/2965/og) / [OG Valrant Liquipedia](https://liquipedia.net/valorant/OG)",inline=False)
+                    embed.add_field(name="Links",value="[OG LDN VLR](https://www.vlr.gg/team/8903/og-ldn-utd) / [OG LDN Valorant Liquipedia](https://liquipedia.net/valorant/OG_LDN_UTD)",inline=False)
                     await message.reply(embed=embed)
 
 
@@ -885,8 +883,8 @@ async def on_message(message):
                       )
                   else:
                       embed = discord.Embed(
-                          title="OG Valorant's next game",
-                          url="https://www.vlr.gg/team/2965/og",
+                          title="OG LDN Valorant's next game",
+                          url="https://www.vlr.gg/team/8903/og-ldn-utd",
                           color=0xd57280)
                       embed.set_thumbnail(
                           url=
@@ -898,7 +896,7 @@ async def on_message(message):
                       embed.add_field(
                           name="Links",
                           value=
-                          "[OG VLR](https://www.vlr.gg/team/2965/og) / [OG Valrant Liquipedia](https://liquipedia.net/valorant/OG)",
+                          "[OG LDN VLR](https://www.vlr.gg/team/8903/og-ldn-utd) / [OG LDN Valrant Liquipedia](https://liquipedia.net/valorant/OG_LDN_UTD)",
                           inline=False)
                       await message.reply(embed=embed)
               else:
@@ -929,10 +927,10 @@ async def on_message(message):
                         or (channelDataID == 955467886200233984)):
                 await message.reply("<@" + userID + "> - No games planned currently - For more information use !nextvalo in <#721391448812945480>")
               else:
-                    embed = discord.Embed(title="OG Valorant's next game",url="https://www.vlr.gg/team/2965/og",color=0xd57280)
+                    embed = discord.Embed(title="OG LDN Valorant's next game",url="https://www.vlr.gg/team/8903/og-ldn-utd",color=0xd57280)
                     embed.set_thumbnail(url="https://liquipedia.net/commons/images/thumb/0/00/OG_RB_Logo.png/600px-OG_RB_Logo.png")
                     embed.add_field(name="No games planned",value="No games planned",inline=True)
-                    embed.add_field(name="Links",value="[OG VLR](https://www.vlr.gg/team/2965/og) / [OG Valrant Liquipedia](https://liquipedia.net/valorant/OG)",inline=False)
+                    embed.add_field(name="Links",value="[OG LDN VLR](https://www.vlr.gg/team/8903/og-ldn-utd) / [OG LDN Valorant Liquipedia](https://liquipedia.net/valorant/OG_LDN_UTD)",inline=False)
                     await message.reply(embed=embed)
 
 
