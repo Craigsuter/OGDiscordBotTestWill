@@ -59,11 +59,13 @@ def DotaCheck(channelDataID):
       containers4 = page_soup2.findAll("div", {"style" : "font-size:75%; padding-bottom:2px"})
       serieslength= containers4[0].text
       serieslength = serieslength[1:-1]
-      
+      containers5 = page_soup2.findAll("div", {"style": "overflow:hidden; text-overflow:ellipsis; max-width: 170px; vertical-align:middle; white-space:nowrap; font-size:11px; height:16px; margin-top:3px;"})
 
       try:
         v_table = page_soup2.find("table", attrs={"class": "wikitable wikitable-striped infobox_matches_content"})
         tabledata = v_table.tbody.find_all("tr")
+        
+        tournamentname = containers5[0].text
 
 
         tablestorage = tabledata[1].find_all('a', href=True)
@@ -194,7 +196,7 @@ def DotaCheck(channelDataID):
       #Creates the embed with all the details
       else:
         print(c)
-        embed=discord.Embed(title="OG Dota's next game", url="https://liquipedia.net/dota2/OG", color=0xf10909)
+        embed=discord.Embed(title="OG Dota's next game - " + str(tournamentname), url="https://liquipedia.net/dota2/OG", color=0xf10909)
         embed.set_thumbnail(url="https://liquipedia.net/commons/images/thumb/0/00/OG_RB_Logo.png/600px-OG_RB_Logo.png")
         if(str(epoch) != "No games planned"):
           embed.add_field(name=Teams, value="<t:" + str(epoch) + "> - this is local to your timezone", inline=True)
