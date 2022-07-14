@@ -71,7 +71,7 @@ def DotaCheck(channelDataID):
         tablestorage = tabledata[1].find_all('a', href=True)
         URL = tablestorage[0]['href']
         extendedURL = "https://liquipedia.net" + URL
-        links = links + "\n [Tournament](" + extendedURL +")"
+        links = links + "\n [Tournament - "+ tournamentname +"](" + extendedURL +")"
       except:
         pass
 
