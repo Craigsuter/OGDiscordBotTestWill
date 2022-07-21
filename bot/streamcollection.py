@@ -189,7 +189,7 @@ def DotaStreams():
               flagsToSend.append(':flag_rs:')
             elif(flags[counter3]=='Vietnam'):
               flagsToSend.append(':flag_vn:')
-            elif(flags[coutner3]=="Saudi_Arabia"):
+            elif(flags[counter3]=="Saudi_Arabia"):
               flagsToSend.append(':flag_sa:')
             else:
               flagsToSend.append(':pirate_flag:')
