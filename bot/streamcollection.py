@@ -55,8 +55,13 @@ def DotaStreams():
         twitch = "https://www.twitch.tv/esl_dota2b"
       elif(twitch == 'ESL_Dota_2'):
         twitch = "https://www.twitch.tv/esl_dota2"
+      elif(twitch=='Gamers8GG'):
+        twitch = "https://www.twitch.tv/gamers8gg" 
+      elif(twitch== 'Gamers8GG_B'):
+        twitch =  "https://www.twitch.tv/gamers8gg_b"
       else:
         twitch = "https://www.twitch.tv/" + twitch
+      
 
       
       
