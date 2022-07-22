@@ -4762,7 +4762,7 @@ async def testingspam():
           
           pass
         else:
-          if(Teams == "OG vs TBD" or Teams == "OG vs TBD"):
+          if(Teams == "OG vs TBD" or Teams == "TBD vs OG"):
             print("TBD")
           else:
             eventdata = await guild.create_scheduled_event(name=name, description=description, start_time=time, end_time=end_time, entity_type=discord.enums.EntityType(3), location=linktogame)
@@ -4776,7 +4776,7 @@ async def testingspam():
           
           
       except:
-        if(Teams == "OG vs TBD" or Teams == "OG vs TBD"):
+        if(Teams == "OG vs TBD" or Teams == "TBD vs OG"):
             print("TBD")
         else:
             eventdata = await guild.create_scheduled_event(name=name, description=description, start_time=time, end_time=end_time, entity_type=discord.enums.EntityType(3), location=linktogame)
