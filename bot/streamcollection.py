@@ -61,7 +61,9 @@ def DotaStreams():
         twitch =  "https://www.twitch.tv/gamers8gg_b"
       else:
         twitch = "https://www.twitch.tv/" + twitch
+        
       
+        
 
       
       

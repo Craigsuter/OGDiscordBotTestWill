@@ -4762,24 +4762,32 @@ async def testingspam():
           
           pass
         else:
-          eventdata = await guild.create_scheduled_event(name=name, description=description, start_time=time, end_time=end_time, entity_type=discord.enums.EntityType(3), location=linktogame)
+          if(Teams == "OG vs TBD" or Teams == "OG vs TBD"):
+            print("TBD")
+          else:
+            eventdata = await guild.create_scheduled_event(name=name, description=description, start_time=time, end_time=end_time, entity_type=discord.enums.EntityType(3), location=linktogame)
+            data2= await guild.fetch_scheduled_event(eventdata.id)
+            await channel.send(data2.url)
+            await channel2.send(str(gardenerinfo))
           f = open("dotaevent.txt", "w")
           f.write(linetocheck)
           f.close()
           upload_file('/dotaevent.txt', 'dotaevent.txt')
-          data2= await guild.fetch_scheduled_event(eventdata.id)
-          await channel.send(data2.url)
-          await channel2.send(str(gardenerinfo))
+          
           
       except:
-        eventdata = await guild.create_scheduled_event(name=name, description=description, start_time=time, end_time=end_time, entity_type=discord.enums.EntityType(3), location=linktogame)
+        if(Teams == "OG vs TBD" or Teams == "OG vs TBD"):
+            print("TBD")
+        else:
+            eventdata = await guild.create_scheduled_event(name=name, description=description, start_time=time, end_time=end_time, entity_type=discord.enums.EntityType(3), location=linktogame)
+            data2= await guild.fetch_scheduled_event(eventdata.id)
+            await channel.send(data2.url)
+            await channel2.send(str(gardenerinfo))
+        
         f = open("dotaevent.txt", "w")
         f.write(linetocheck)
         f.close()
         upload_file('/dotaevent.txt', 'dotaevent.txt')
-        data2= await guild.fetch_scheduled_event(eventdata.id)
-        await channel.send(data2.url)
-        await channel2.send(str(gardenerinfo))
         pass
 
       
