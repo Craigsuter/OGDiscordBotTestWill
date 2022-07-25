@@ -1426,7 +1426,7 @@ async def on_message(message):
                   message= message+"<@" + str(peeps[int(chosenone)]) + "> , "
                   peeps.pop(int(chosenone))
 
-              print(message)
+              await message.channel.send(message)
                 
                 
            
@@ -4510,8 +4510,7 @@ async def on_message(message):
         f.close()
         upload_file('/droplastmessage.txt', 'lastmessage.txt')
 
-    if (message.author == discord.Permissions.administrator):
-        print("nice")
+
 
     #Spanish Translations - Main OG Discord
     if (channelDataID == 818793950965006357):
