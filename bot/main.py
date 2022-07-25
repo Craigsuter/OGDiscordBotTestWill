@@ -1402,38 +1402,10 @@ async def on_message(message):
             
 
             if(messagereceived =="!test"):
-              try:
-                SeriesLength = [1, 2, 3, 5]
-                hoursPaid = [2, 3, 4, 6]
-                string="apple"
-                if (str(secondPartOfMessage) != "none" and str(thirdPartOfMessage) != "none"):
-                  if message.author.id == 183707605032501248:
-                    if (int(secondPartOfMessage) in SeriesLength):
-                      hoursToAdd = hoursPaid[SeriesLength.index(int(secondPartOfMessage))]
-                      try:
-                        download_file('/willinfo.txt', 'willinfo.txt')
-                        f=open('willinfo.txt', 'r')
-                        lines=f.readlines()
-                        f.close()
-                      except:
-                        f = open("demofile2.txt", "w")
-                        f.write("0\n0\n0")
-                        f.close()
-                      with open("willinfo.txt") as f:
-                        lines = f.readlines()
-
-                      value = lines[0]  
-                      print(value)
-
-                        
-                    else:
-                      z = string+1
-                    
-                else:
-                  await message.channel.send("Error in command usage")
-              except:
-                await message.channel.send("Error in command usage")
-                
+              test = await message.channel.send("lol")
+              emote = client.get_emoji(730890894814740541)
+              await test.add_reaction(emote)
+           
 
                 
             if(messagereceived =="!valorantdiscordevent" or messagereceived=="!valodiscordevent"):
@@ -4722,6 +4694,7 @@ async def testingspam():
    
     #Dota daily
     try:
+      emote = client.get_emoji(730890894814740541)
       channel = client.get_channel(964298402089275462)
       channel2 = client.get_channel(973130064667484170)
       value = DotaCheck(0)
@@ -4768,7 +4741,8 @@ async def testingspam():
             eventdata = await guild.create_scheduled_event(name=name, description=description, start_time=time, end_time=end_time, entity_type=discord.enums.EntityType(3), location=linktogame)
             data2= await guild.fetch_scheduled_event(eventdata.id)
             await channel.send(data2.url)
-            await channel2.send(str(gardenerinfo))
+            test = await channel2.send(str(gardenerinfo))
+            await test.add_reaction(emote)
           f = open("dotaevent.txt", "w")
           f.write(linetocheck)
           f.close()
@@ -4782,7 +4756,8 @@ async def testingspam():
             eventdata = await guild.create_scheduled_event(name=name, description=description, start_time=time, end_time=end_time, entity_type=discord.enums.EntityType(3), location=linktogame)
             data2= await guild.fetch_scheduled_event(eventdata.id)
             await channel.send(data2.url)
-            await channel2.send(str(gardenerinfo))
+            test = await channel2.send(str(gardenerinfo))
+            await test.add_reaction(emote)
         
         f = open("dotaevent.txt", "w")
         f.write(linetocheck)
@@ -4798,6 +4773,7 @@ async def testingspam():
 
     #Valo daily - regular OG
     try:
+      emote = client.get_emoji(730890894814740541)
       channel = client.get_channel(964298835453169664)
       channel2 = client.get_channel(973130064667484170)
       value = ValoCheck(0, 'https://www.vlr.gg/team/2965/og')
@@ -4844,7 +4820,8 @@ async def testingspam():
           upload_file('/valoevent.txt', 'valoevent.txt')
           data2= await guild.fetch_scheduled_event(eventdata.id)
           await channel.send(data2.url)
-          await channel2.send(str(gardenerinfo))
+          test = await channel2.send(str(gardenerinfo))
+          await test.add_reaction(emote)
           
       except:
         eventdata = await guild.create_scheduled_event(name=name, description=description, start_time=time, end_time=end_time, entity_type=discord.enums.EntityType(3), location=linktogame)
@@ -4854,7 +4831,8 @@ async def testingspam():
         upload_file('/valoevent.txt', 'valoevent.txt')
         data2= await guild.fetch_scheduled_event(eventdata.id)
         await channel.send(data2.url)
-        await channel2.send(str(gardenerinfo))
+        test = await channel2.send(str(gardenerinfo))
+        await test.add_reaction(emote)
         pass
 
       
@@ -4864,6 +4842,7 @@ async def testingspam():
 
     #Get events for ldn utd OG
     try:
+      emote = client.get_emoji(730890894814740541)
       channel = client.get_channel(964298835453169664)
       channel2 = client.get_channel(973130064667484170)
       value = ValoCheck(0, 'https://www.vlr.gg/team/8903/og-ldn-utd')
@@ -4910,7 +4889,8 @@ async def testingspam():
           upload_file('/ldnvaloevent.txt', 'ldnvaloevent.txt')
           data2= await guild.fetch_scheduled_event(eventdata.id)
           await channel.send(data2.url)
-          await channel2.send(str(gardenerinfo))
+          test = await channel2.send(str(gardenerinfo))
+          await test.add_reaction(emote)
                               
           
       except:
@@ -4921,7 +4901,8 @@ async def testingspam():
         upload_file('/ldnvaloevent.txt', 'ldnvaloevent.txt')
         data2= await guild.fetch_scheduled_event(eventdata.id)
         await channel.send(data2.url)
-        await channel2.send(str(gardenerinfo))
+        test = await channel2.send(str(gardenerinfo))
+        await test.add_reaction(emote)
         pass
 
       
@@ -4932,6 +4913,7 @@ async def testingspam():
 
   #csgoacad
     try:
+      emote = client.get_emoji(730890894814740541)
       channel = client.get_channel(964298754968649748)
       channel2 = client.get_channel(973130064667484170)
       value = CSGOCheck(0, 'https://www.hltv.org/team/11672/og-academy#tab-matchesBox')
@@ -4985,7 +4967,8 @@ async def testingspam():
           upload_file('/csgoaevent.txt', 'csgoaevent.txt')
           data2= await guild.fetch_scheduled_event(eventdata.id)
           await channel.send(data2.url)
-          await channel2.send(str(gardenerinfo))
+          test = await channel2.send(str(gardenerinfo))
+          await test.add_reaction(emote)
           
       except:
         try:
@@ -4998,7 +4981,8 @@ async def testingspam():
         upload_file('/csgoaevent.txt', 'csgoaevent.txt')
         data2= await guild.fetch_scheduled_event(eventdata.id)
         await channel.send(data2.url)
-        await channel2.send(str(gardenerinfo))
+        test = await channel2.send(str(gardenerinfo))
+        await test.add_reaction(emote)
         pass
 
         
@@ -5011,6 +4995,7 @@ async def testingspam():
 
 #CSGO daily
     try:
+      emote = client.get_emoji(730890894814740541)
       channel = client.get_channel(964298754968649748)
       channel2 = client.get_channel(973130064667484170)
       value = CSGOCheck(0, 'https://www.hltv.org/team/10503/og#tab-matchesBox')
@@ -5059,7 +5044,8 @@ async def testingspam():
           upload_file('/csgoevent.txt', 'csgoevent.txt')
           data2= await guild.fetch_scheduled_event(eventdata.id)
           await channel.send(data2.url)
-          await channel2.send(str(gardenerinfo))
+          test = await channel2.send(str(gardenerinfo))
+          await test.add_reaction(emote)
           
       except:
         eventdata = await guild.create_scheduled_event(name=name, description=description, start_time=time, end_time=end_time, entity_type=discord.enums.EntityType(3), location=gamepage)
@@ -5069,7 +5055,8 @@ async def testingspam():
         upload_file('/csgoevent.txt', 'csgoevent.txt')
         data2= await guild.fetch_scheduled_event(eventdata.id)
         await channel.send(data2.url)
-        await channel2.send(str(gardenerinfo))
+        test = await channel2.send(str(gardenerinfo))
+        await test.add_reaction(emote)
         pass
 
         
