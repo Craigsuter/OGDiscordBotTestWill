@@ -1421,10 +1421,12 @@ async def on_message(message):
                 if(numberofpeeps < 5):
                   message2send= message2send + "<@" + str(peeps[0]) + "> , "
                   peeps.pop(0)
+                  chosen=chosen+1
                 else:
                   chosenone = random.randint(0,(len(peeps)-1))
                   message2send= message2send+"<@" + str(peeps[int(chosenone)]) + "> , "
                   peeps.pop(int(chosenone))
+                  chosen=chosen+1
 
               await message.channel.send(message2send)
                 
