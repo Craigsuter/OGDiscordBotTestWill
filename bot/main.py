@@ -1403,12 +1403,12 @@ async def on_message(message):
 
             if(messagereceived =="!dotagardeners"):
               download_file('/dotaeventsignup.txt', 'dotaeventsign.txt')
-              channel = client.get_channel(973130064667484170)
+              channel2 = client.get_channel(973130064667484170)
               peeps=[]
               f = open("dotaeventsign.txt", "r")
               data = f.read()
-              message = await channel.fetch_message(int(data))
-              for reaction in message.reactions:
+              messagedata = await channel2.fetch_message(int(data))
+              for reaction in messagedata.reactions:
                 print("hi")
                 async for user in reaction.users():
                   if(user != client.user):
@@ -1416,17 +1416,17 @@ async def on_message(message):
               peeps = list(dict.fromkeys(peeps))
               numberofpeeps=len(peeps)
               chosen=0
-              message="The people selected are: "
+              message2send="The people selected are: "
               while(len(peeps) > 0 and chosen < 5):
                 if(numberofpeeps < 5):
-                  message= message + "<@" + str(peeps[0]) + "> , "
+                  message2send= message2send + "<@" + str(peeps[0]) + "> , "
                   peeps.pop(0)
                 else:
                   chosenone = random.randint(0,(len(peeps)-1))
-                  message= message+"<@" + str(peeps[int(chosenone)]) + "> , "
+                  message2send= message2send+"<@" + str(peeps[int(chosenone)]) + "> , "
                   peeps.pop(int(chosenone))
 
-              await message.channel.send(message)
+              await message.channel.send(message2send)
                 
                 
            
