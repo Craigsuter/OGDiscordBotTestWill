@@ -1401,8 +1401,7 @@ async def on_message(message):
         else:
             
 
-            if(messagereceived =="!test"):
-              upload_file('/dotaeventsignup.txt', 'valoeventsign.txt')
+            if(messagereceived =="!dotagardeners"):
               download_file('/dotaeventsignup.txt', 'dotaeventsign.txt')
               channel = client.get_channel(973130064667484170)
               peeps=[]
@@ -1414,9 +1413,21 @@ async def on_message(message):
                 async for user in reaction.users():
                   if(user != client.user):
                     peeps.append(user.id)
-                    print(str(user.id) + "I dunno")
               peeps = list(dict.fromkeys(peeps))
-              print(peeps)
+              numberofpeeps=len(peeps)
+              chosen=0
+              message="The people selected are: "
+              while(len(peeps) > 0 and chosen < 5):
+                if(numberofpeeps < 5):
+                  message= message + "<@" + str(peeps[0]) + "> , "
+                  peeps.pop(0)
+                else:
+                  chosenone = random.randint(0,(len(peeps)-1))
+                  message= message+"<@" + str(peeps[int(chosenone)]) + "> , "
+                  peeps.pop(int(chosenone))
+
+              print(message)
+                
                 
            
 
