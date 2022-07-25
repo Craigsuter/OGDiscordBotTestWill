@@ -1402,9 +1402,22 @@ async def on_message(message):
             
 
             if(messagereceived =="!test"):
-              test = await message.channel.send("lol")
-              emote = client.get_emoji(730890894814740541)
-              await test.add_reaction(emote)
+              upload_file('/dotaeventsignup.txt', 'valoeventsign.txt')
+              download_file('/dotaeventsignup.txt', 'dotaeventsign.txt')
+              channel = client.get_channel(973130064667484170)
+              peeps=[]
+              f = open("dotaeventsign.txt", "r")
+              data = f.read()
+              message = await channel.fetch_message(int(data))
+              for reaction in message.reactions:
+                print("hi")
+                async for user in reaction.users():
+                  if(user != client.user):
+                    peeps.append(user.id)
+                    print(str(user.id) + "I dunno")
+              peeps = list(dict.fromkeys(peeps))
+              print(peeps)
+                
            
 
                 
@@ -4743,10 +4756,16 @@ async def testingspam():
             await channel.send(data2.url)
             test = await channel2.send(str(gardenerinfo))
             await test.add_reaction(emote)
+            f=open("dotaeventsign.txt", "w")
+            f.write(str(test.id))
+            f.close
+            upload_file('/dotaeventsignup.txt', 'dotaeventsign.txt')
+            
           f = open("dotaevent.txt", "w")
           f.write(linetocheck)
           f.close()
           upload_file('/dotaevent.txt', 'dotaevent.txt')
+          
           
           
       except:
@@ -4758,11 +4777,16 @@ async def testingspam():
             await channel.send(data2.url)
             test = await channel2.send(str(gardenerinfo))
             await test.add_reaction(emote)
+            f=open("dotaeventsign.txt", "w")
+            f.write(str(test.id))
+            f.close
+            upload_file('/dotaeventsignup.txt', 'dotaeventsign.txt')
         
         f = open("dotaevent.txt", "w")
         f.write(linetocheck)
         f.close()
         upload_file('/dotaevent.txt', 'dotaevent.txt')
+        
         pass
 
       
@@ -4891,6 +4915,10 @@ async def testingspam():
           await channel.send(data2.url)
           test = await channel2.send(str(gardenerinfo))
           await test.add_reaction(emote)
+          f=open("valoeventsign.txt", "w")
+          f.write(str(test.id))
+          f.close
+          upload_file('/valoeventsignup.txt', 'valoeventsign.txt')
                               
           
       except:
@@ -4903,6 +4931,10 @@ async def testingspam():
         await channel.send(data2.url)
         test = await channel2.send(str(gardenerinfo))
         await test.add_reaction(emote)
+        f=open("valoeventsign.txt", "w")
+        f.write(str(test.id))
+        f.close
+        upload_file('/valoeventsignup.txt', 'valoeventsign.txt')
         pass
 
       
@@ -4969,6 +5001,10 @@ async def testingspam():
           await channel.send(data2.url)
           test = await channel2.send(str(gardenerinfo))
           await test.add_reaction(emote)
+          f=open("csgoaeventsign.txt", "w")
+          f.write(str(test.id))
+          f.close
+          upload_file('/csgoaeventsignup.txt', 'csgoaeventsign.txt')
           
       except:
         try:
@@ -4983,6 +5019,10 @@ async def testingspam():
         await channel.send(data2.url)
         test = await channel2.send(str(gardenerinfo))
         await test.add_reaction(emote)
+        f=open("csgoaeventsign.txt", "w")
+        f.write(str(test.id))
+        f.close
+        upload_file('/csgoaeventsignup.txt', 'csgoaeventsign.txt')
         pass
 
         
@@ -5046,6 +5086,10 @@ async def testingspam():
           await channel.send(data2.url)
           test = await channel2.send(str(gardenerinfo))
           await test.add_reaction(emote)
+          f=open("csgoeventsign.txt", "w")
+          f.write(str(test.id))
+          f.close
+          upload_file('/csgoeventsignup.txt', 'csgoeventsign.txt')
           
       except:
         eventdata = await guild.create_scheduled_event(name=name, description=description, start_time=time, end_time=end_time, entity_type=discord.enums.EntityType(3), location=gamepage)
@@ -5057,6 +5101,10 @@ async def testingspam():
         await channel.send(data2.url)
         test = await channel2.send(str(gardenerinfo))
         await test.add_reaction(emote)
+        f=open("csgoeventsign.txt", "w")
+        f.write(str(test.id))
+        f.close
+        upload_file('/csgoeventsignup.txt', 'csgoeventsign.txt')
         pass
 
         
