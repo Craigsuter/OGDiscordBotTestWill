@@ -1442,7 +1442,7 @@ async def on_message(message):
               download_file('/csgoaeventsignup.txt', 'csgoeventsign.txt')
               channel2 = client.get_channel(973130064667484170)
               peeps=[]
-              f = open("dotaeventsign.txt", "r")
+              f = open("csgoeventsign.txt", "r")
               data = f.read()
               messagedata = await channel2.fetch_message(int(data))
               for reaction in messagedata.reactions:
