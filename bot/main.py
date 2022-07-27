@@ -1454,8 +1454,8 @@ async def on_message(message):
               numberofpeeps=len(peeps)
               chosen=0
               message2send="The people selected are: "
-              while(len(peeps) > 0 and chosen < 5):
-                if(numberofpeeps < 5):
+              while(len(peeps) > 0 and chosen < 3):
+                if(numberofpeeps < 3):
                   message2send= message2send + "<@" + str(peeps[0]) + "> , "
                   peeps.pop(0)
                   chosen=chosen+1
