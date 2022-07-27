@@ -4807,7 +4807,7 @@ async def testingspam():
             await test.add_reaction(emote)
             f=open("dotaeventsign.txt", "w")
             f.write(str(test.id))
-            f.close
+            f.close()
             upload_file('/dotaeventsignup.txt', 'dotaeventsign.txt')
             
           f = open("dotaevent.txt", "w")
@@ -4828,7 +4828,7 @@ async def testingspam():
             await test.add_reaction(emote)
             f=open("dotaeventsign.txt", "w")
             f.write(str(test.id))
-            f.close
+            f.close()
             upload_file('/dotaeventsignup.txt', 'dotaeventsign.txt')
         
         f = open("dotaevent.txt", "w")
@@ -4966,7 +4966,7 @@ async def testingspam():
           await test.add_reaction(emote)
           f=open("valoeventsign.txt", "w")
           f.write(str(test.id))
-          f.close
+          f.close()
           upload_file('/valoeventsignup.txt', 'valoeventsign.txt')
                               
           
@@ -4982,7 +4982,7 @@ async def testingspam():
         await test.add_reaction(emote)
         f=open("valoeventsign.txt", "w")
         f.write(str(test.id))
-        f.close
+        f.close()
         upload_file('/valoeventsignup.txt', 'valoeventsign.txt')
         pass
 
@@ -5052,7 +5052,7 @@ async def testingspam():
           await test.add_reaction(emote)
           f=open("csgoaeventsign.txt", "w")
           f.write(str(test.id))
-          f.close
+          f.close()
           upload_file('/csgoaeventsignup.txt', 'csgoaeventsign.txt')
           
       except:
@@ -5070,7 +5070,7 @@ async def testingspam():
         await test.add_reaction(emote)
         f=open("csgoaeventsign.txt", "w")
         f.write(str(test.id))
-        f.close
+        f.close()
         upload_file('/csgoaeventsignup.txt', 'csgoaeventsign.txt')
         pass
 
@@ -5137,7 +5137,7 @@ async def testingspam():
           await test.add_reaction(emote)
           f=open("csgoeventsign.txt", "w")
           f.write(str(test.id))
-          f.close
+          f.close()
           upload_file('/csgoeventsignup.txt', 'csgoeventsign.txt')
           
       except:
@@ -5152,7 +5152,7 @@ async def testingspam():
         await test.add_reaction(emote)
         f=open("csgoeventsign.txt", "w")
         f.write(str(test.id))
-        f.close
+        f.close()
         upload_file('/csgoeventsignup.txt', 'csgoeventsign.txt')
         pass
 
