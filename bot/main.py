@@ -1427,12 +1427,18 @@ async def on_message(message):
               message2send="The people selected are: "
               while(len(peeps) > 0 and chosen < 4):
                 if(numberofpeeps < 5):
-                  message2send= message2send + "<@" + str(peeps[0]) + "> , "
+                  if(numberofpeeps < 4):
+                    message2send= message2send + "<@" + str(peeps[0]) + "> , "
+                  else:
+                    message2send= message2send + "<@" + str(peeps[0]) + ">  "
                   peeps.pop(0)
                   chosen=chosen+1
                 else:
                   chosenone = random.randint(0,(len(peeps)-1))
-                  message2send= message2send+"<@" + str(peeps[int(chosenone)]) + "> , "
+                  if(chosen < 3):
+                    message2send= message2send+"<@" + str(peeps[int(chosenone)]) + "> , "
+                  else:
+                    message2send= message2send+"<@" + str(peeps[int(chosenone)]) + ">  "
                   peeps.pop(int(chosenone))
                   chosen=chosen+1
 
@@ -1456,12 +1462,18 @@ async def on_message(message):
               message2send="The people selected are: "
               while(len(peeps) > 0 and chosen < 2):
                 if(numberofpeeps < 3):
-                  message2send= message2send + "<@" + str(peeps[0]) + "> , "
+                  if(numberofpeeps < 2):
+                    message2send= message2send + "<@" + str(peeps[0]) + "> , "
+                  else:
+                    message2send= message2send + "<@" + str(peeps[0]) + ">  "
                   peeps.pop(0)
                   chosen=chosen+1
                 else:
                   chosenone = random.randint(0,(len(peeps)-1))
-                  message2send= message2send+"<@" + str(peeps[int(chosenone)]) + "> , "
+                  if(chosen < 1):
+                    message2send= message2send+"<@" + str(peeps[int(chosenone)]) + "> , "
+                  else:
+                    message2send= message2send+"<@" + str(peeps[int(chosenone)]) + ">  "
                   peeps.pop(int(chosenone))
                   chosen=chosen+1
 
@@ -1487,12 +1499,18 @@ async def on_message(message):
               message2send="The people selected are: "
               while(len(peeps) > 0 and chosen < 3):
                 if(numberofpeeps < 4):
-                  message2send= message2send + "<@" + str(peeps[0]) + "> , "
+                  if(numberofpeeps < 3):
+                    message2send= message2send + "<@" + str(peeps[0]) + "> , "
+                  else:
+                    message2send= message2send + "<@" + str(peeps[0]) + ">  "
                   peeps.pop(0)
                   chosen=chosen+1
                 else:
                   chosenone = random.randint(0,(len(peeps)-1))
-                  message2send= message2send+"<@" + str(peeps[int(chosenone)]) + "> , "
+                  if(chosen < 2):
+                    message2send= message2send+"<@" + str(peeps[int(chosenone)]) + "> , "
+                  else:
+                    message2send= message2send+"<@" + str(peeps[int(chosenone)]) + "> "
                   peeps.pop(int(chosenone))
                   chosen=chosen+1
 
@@ -1518,12 +1536,18 @@ async def on_message(message):
               message2send="The people selected are: "
               while(len(peeps) > 0 and chosen < 2):
                 if(numberofpeeps < 3):
-                  message2send= message2send + "<@" + str(peeps[0]) + "> , "
+                  if(numberofpeeps < 2):
+                    message2send= message2send + "<@" + str(peeps[0]) + "> , "
+                  else:
+                    message2send= message2send + "<@" + str(peeps[0]) + ">  "
                   peeps.pop(0)
                   chosen=chosen+1
                 else:
                   chosenone = random.randint(0,(len(peeps)-1))
-                  message2send= message2send+"<@" + str(peeps[int(chosenone)]) + "> , "
+                  if(chosen < 1):
+                    message2send= message2send+"<@" + str(peeps[int(chosenone)]) + "> , "
+                  else:
+                    message2send= message2send+"<@" + str(peeps[int(chosenone)]) + ">  "
                   peeps.pop(int(chosenone))
                   chosen=chosen+1
 
