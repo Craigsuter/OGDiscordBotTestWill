@@ -1526,7 +1526,7 @@ async def on_message(message):
                   peeps.pop(int(chosenone))
                   chosen=chosen+1
 
-              await message.channel.send(message2send)
+              await message.channel.send("done")
 
 
 
