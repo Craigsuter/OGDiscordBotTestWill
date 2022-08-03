@@ -1417,6 +1417,11 @@ async def on_message(message):
               f = open("dotaeventsign.txt", "r")
               data = f.read()
               messagedata = await channel2.fetch_message(int(data))
+              try:
+                emote = client.get_emoji(787697278190223370)
+                await messagedata.add_reaction(emote)
+              except:
+                pass
               for reaction in messagedata.reactions:
                 print("hi")
                 async for user in reaction.users():
@@ -1486,50 +1491,6 @@ async def on_message(message):
 
               await message.channel.send(message2send)
 
-
-            if(messagereceived =="!csgoagardenerstest"):
-              
-              download_file('/csgoaeventsignup.txt', 'csgoaeventsign.txt')
-              channel2 = client.get_channel(973130064667484170)
-              peeps=[]
-              f = open("csgoaeventsign.txt", "r")
-              data = f.read()
-              messagedata = await channel2.fetch_message(int(data))
-              try:
-                emote = client.get_emoji(787697278190223370)
-                await messagedata.add_reaction(emote)
-              except:
-                pass
-              for reaction in messagedata.reactions:
-                print("hi")
-                async for user in reaction.users():
-                  if(user != client.user):
-                    peeps.append(user.id)
-              peeps = list(dict.fromkeys(peeps))
-              numberofpeeps=len(peeps)
-              chosen=0
-              message2send="The people selected are: "
-              while(len(peeps) > 0 and chosen < 2):
-                if(numberofpeeps < 3):
-                  if(numberofpeeps < 2):
-                    message2send= message2send + "<@" + str(peeps[0]) + "> , "
-                  else:
-                    message2send= message2send + "<@" + str(peeps[0]) + ">  "
-                  peeps.pop(0)
-                  chosen=chosen+1
-                else:
-                  chosenone = random.randint(0,(len(peeps)-1))
-                  if(chosen < 1):
-                    message2send= message2send+"<@" + str(peeps[int(chosenone)]) + "> , "
-                  else:
-                    message2send= message2send+"<@" + str(peeps[int(chosenone)]) + ">  "
-                  peeps.pop(int(chosenone))
-                  chosen=chosen+1
-
-              await message.channel.send("done")
-
-
-
             if(messagereceived =="!csgogardeners"):
               download_file('/csgoeventsignup.txt', 'csgoeventsign.txt')
               channel2 = client.get_channel(973130064667484170)
@@ -1537,6 +1498,11 @@ async def on_message(message):
               f = open("csgoeventsign.txt", "r")
               data = f.read()
               messagedata = await channel2.fetch_message(int(data))
+              try:
+                emote = client.get_emoji(787697278190223370)
+                await messagedata.add_reaction(emote)
+              except:
+                pass
               for reaction in messagedata.reactions:
                 print("hi")
                 async for user in reaction.users():
@@ -1574,6 +1540,11 @@ async def on_message(message):
               f = open("valoeventsign.txt", "r")
               data = f.read()
               messagedata = await channel2.fetch_message(int(data))
+              try:
+                emote = client.get_emoji(787697278190223370)
+                await messagedata.add_reaction(emote)
+              except:
+                pass
               for reaction in messagedata.reactions:
                 print("hi")
                 async for user in reaction.users():
