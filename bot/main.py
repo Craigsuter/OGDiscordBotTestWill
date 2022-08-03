@@ -1433,7 +1433,7 @@ async def on_message(message):
               message2send="The people selected are: "
               while(len(peeps) > 0 and chosen < 4):
                 if(numberofpeeps < 5):
-                  if(numberofpeeps < 4):
+                  if(chosen < 3):
                     message2send= message2send + "<@" + str(peeps[0]) + "> , "
                   else:
                     message2send= message2send + "<@" + str(peeps[0]) + ">  "
@@ -1474,7 +1474,7 @@ async def on_message(message):
               message2send="The people selected are: "
               while(len(peeps) > 0 and chosen < 2):
                 if(numberofpeeps < 3):
-                  if(numberofpeeps < 2):
+                  if(chosen < 1):
                     message2send= message2send + "<@" + str(peeps[0]) + "> , "
                   else:
                     message2send= message2send + "<@" + str(peeps[0]) + ">  "
@@ -1516,7 +1516,7 @@ async def on_message(message):
               message2send="The people selected are: "
               while(len(peeps) > 0 and chosen < 3):
                 if(numberofpeeps < 4):
-                  if(numberofpeeps < 3):
+                  if(chosen < 2):
                     message2send= message2send + "<@" + str(peeps[0]) + "> , "
                   else:
                     message2send= message2send + "<@" + str(peeps[0]) + ">  "
@@ -1558,7 +1558,7 @@ async def on_message(message):
               message2send="The people selected are: "
               while(len(peeps) > 0 and chosen < 2):
                 if(numberofpeeps < 3):
-                  if(numberofpeeps < 2):
+                  if(chosen < 1):
                     message2send= message2send + "<@" + str(peeps[0]) + "> , "
                   else:
                     message2send= message2send + "<@" + str(peeps[0]) + ">  "
