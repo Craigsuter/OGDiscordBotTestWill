@@ -61,6 +61,12 @@ def DotaStreams():
         twitch =  "https://www.twitch.tv/gamers8gg_b"
       elif(twitch=='PGL_Dota_2'):
         twitch = "https://www.twitch.tv/pgl_dota2"
+      elif(twitch=='PGL_Dota2_EN2'):
+        twitch = "https://www.twitch.tv/pgl_dota2en2"
+      elif(twitch='PGL_Dota2_EN3'):
+        twitch = "https://www.twitch.tv/pgl_dota2en3"
+      elif(twitch='PGL_Dota2_EN4'):
+        twitch = "https://www.twitch.tv/pgl_dota2en4"
       else:
         twitch = "https://www.twitch.tv/" + twitch
         
