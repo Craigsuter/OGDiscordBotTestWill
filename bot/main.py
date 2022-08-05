@@ -1406,9 +1406,9 @@ async def on_message(message):
               channel2 = client.get_channel(955467886200233984)
               messagedata = await channel2.fetch_message(1005190784921903205)
               for reaction in messagedata.reactions:
-                reaction = str(reaction)
-                print(reaction)
-                if(reaction == "<:OGpeepoYes:730890894814740541>"):
+                reaction2 = str(reaction)
+                
+                if(reaction2 == "<:OGpeepoYes:730890894814740541>"):
                   print("1")
                 else:
                   print("2")
@@ -1429,8 +1429,8 @@ async def on_message(message):
                 pass
               for reaction in messagedata.reactions:
                 print("hi")
-                reaction = str(reaction)
-                if(reaction == "<:OGpeepoYes:730890894814740541>"):
+                reaction2 = str(reaction)
+                if(reaction2 == "<:OGpeepoYes:730890894814740541>"):
                   async for user in reaction.users():
                     if(user != client.user):
                       
@@ -1473,8 +1473,8 @@ async def on_message(message):
                 pass
               for reaction in messagedata.reactions:
                 print("hi")
-                reaction = str(reaction)
-                if(reaction == "<:OGpeepoYes:730890894814740541>"):
+                reaction2 = str(reaction)
+                if(reaction2 == "<:OGpeepoYes:730890894814740541>"):
                   async for user in reaction.users():
                     if(user != client.user):
                       peeps.append(user.id)
@@ -1517,8 +1517,8 @@ async def on_message(message):
                 pass
               for reaction in messagedata.reactions:
                 print("hi")
-                reaction = str(reaction)
-                if(reaction == "<:OGpeepoYes:730890894814740541>"):
+                reaction2 = str(reaction)
+                if(reaction2 == "<:OGpeepoYes:730890894814740541>"):
                   async for user in reaction.users():
                     if(user != client.user):
                       peeps.append(user.id)
@@ -1561,8 +1561,8 @@ async def on_message(message):
                 pass
               for reaction in messagedata.reactions:
                 print("hi")
-                reaction = str(reaction)
-                if(reaction == "<:OGpeepoYes:730890894814740541>"):
+                reaction2 = str(reaction)
+                if(reaction2 == "<:OGpeepoYes:730890894814740541>"):
                   async for user in reaction.users():
                     if(user != client.user):
                       peeps.append(user.id)
