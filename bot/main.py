@@ -67,7 +67,7 @@ from testscoreboarding import testscoreboardadder
 from cstour import next_cst
 from cstour import change_cst
 from cstour import getcs_url
-from discord import app_commands
+
 
 #sets up command prefix
 intents = discord.Intents().all()
@@ -1403,12 +1403,17 @@ async def on_message(message):
             
             if (messagereceived=="!test"):
               test = await message.channel.send("Hi")
-              emote = client.get_emoji(958458872979394660)
-              await test.add_reaction(emote)
-              print(test.id)
-              f=open("csgoaeventsign.txt", "w")
-              f.write(str(test.id))
-              f.close
+              channel2 = client.get_channel(955467886200233984)
+              messagedata = await channel2.fetch_message(1005190784921903205)
+              for reaction in messagedata.reactions:
+                reaction = str(reaction)
+                print(reaction)
+                if(reaction == "<:OGpeepoYes:730890894814740541>"):
+                  print("1")
+                else:
+                  print("2")
+
+          
               
             if(messagereceived =="!dotagardeners"):
               download_file('/dotaeventsignup.txt', 'dotaeventsign.txt')
@@ -1424,9 +1429,12 @@ async def on_message(message):
                 pass
               for reaction in messagedata.reactions:
                 print("hi")
-                async for user in reaction.users():
-                  if(user != client.user):
-                    peeps.append(user.id)
+                reaction = str(reaction)
+                if(reaction == "<:OGpeepoYes:730890894814740541>"):
+                  async for user in reaction.users():
+                    if(user != client.user):
+                      
+                      peeps.append(user.id)
               peeps = list(dict.fromkeys(peeps))
               numberofpeeps=len(peeps)
               chosen=0
@@ -1465,9 +1473,11 @@ async def on_message(message):
                 pass
               for reaction in messagedata.reactions:
                 print("hi")
-                async for user in reaction.users():
-                  if(user != client.user):
-                    peeps.append(user.id)
+                reaction = str(reaction)
+                if(reaction == "<:OGpeepoYes:730890894814740541>"):
+                  async for user in reaction.users():
+                    if(user != client.user):
+                      peeps.append(user.id)
               peeps = list(dict.fromkeys(peeps))
               numberofpeeps=len(peeps)
               chosen=0
@@ -1507,9 +1517,11 @@ async def on_message(message):
                 pass
               for reaction in messagedata.reactions:
                 print("hi")
-                async for user in reaction.users():
-                  if(user != client.user):
-                    peeps.append(user.id)
+                reaction = str(reaction)
+                if(reaction == "<:OGpeepoYes:730890894814740541>"):
+                  async for user in reaction.users():
+                    if(user != client.user):
+                      peeps.append(user.id)
               peeps = list(dict.fromkeys(peeps))
               numberofpeeps=len(peeps)
               chosen=0
@@ -1549,9 +1561,11 @@ async def on_message(message):
                 pass
               for reaction in messagedata.reactions:
                 print("hi")
-                async for user in reaction.users():
-                  if(user != client.user):
-                    peeps.append(user.id)
+                reaction = str(reaction)
+                if(reaction == "<:OGpeepoYes:730890894814740541>"):
+                  async for user in reaction.users():
+                    if(user != client.user):
+                      peeps.append(user.id)
               peeps = list(dict.fromkeys(peeps))
               numberofpeeps=len(peeps)
               chosen=0
