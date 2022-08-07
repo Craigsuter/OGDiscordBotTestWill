@@ -4973,6 +4973,7 @@ async def testingspam():
       channel2 = client.get_channel(973130064667484170)
       value = ValoCheck(0, 'https://www.vlr.gg/team/2965/og')
       teams = value[1]
+      enemyteam = value[10]
       time = datetime.datetime.now().astimezone() + value[3]
       streaminfo = ValoStreams('https://www.vlr.gg/team/2965/og')
       linktogame = value[4]
@@ -5008,6 +5009,21 @@ async def testingspam():
           
           pass
         else:
+          if(str(enemyteam) != "TBD"):
+            eventdata = await guild.create_scheduled_event(name=name, description=description, start_time=time, end_time=end_time, entity_type=discord.enums.EntityType(3), location=linktogame)
+            f = open("valoevent.txt", "w")
+            f.write(linetocheck)
+            f.close()
+            upload_file('/valoevent.txt', 'valoevent.txt')
+            data2= await guild.fetch_scheduled_event(eventdata.id)
+            await channel.send(data2.url)
+            test = await channel2.send(str(gardenerinfo))
+            await test.add_reaction(emote)
+          else:
+            print("Valo Enemy = TBD")
+          
+      except:
+        if(str(enemyteam) != "TBD"):
           eventdata = await guild.create_scheduled_event(name=name, description=description, start_time=time, end_time=end_time, entity_type=discord.enums.EntityType(3), location=linktogame)
           f = open("valoevent.txt", "w")
           f.write(linetocheck)
@@ -5017,18 +5033,9 @@ async def testingspam():
           await channel.send(data2.url)
           test = await channel2.send(str(gardenerinfo))
           await test.add_reaction(emote)
-          
-      except:
-        eventdata = await guild.create_scheduled_event(name=name, description=description, start_time=time, end_time=end_time, entity_type=discord.enums.EntityType(3), location=linktogame)
-        f = open("valoevent.txt", "w")
-        f.write(linetocheck)
-        f.close()
-        upload_file('/valoevent.txt', 'valoevent.txt')
-        data2= await guild.fetch_scheduled_event(eventdata.id)
-        await channel.send(data2.url)
-        test = await channel2.send(str(gardenerinfo))
-        await test.add_reaction(emote)
-        pass
+          pass
+        else:
+          print("Valo enemy = TBD")
 
       
       
@@ -5042,6 +5049,7 @@ async def testingspam():
       channel2 = client.get_channel(973130064667484170)
       value = ValoCheck(0, 'https://www.vlr.gg/team/8903/og-ldn-utd')
       teams = value[1]
+      enemyteam = value[10]
       time = datetime.datetime.now().astimezone() + value[3]
       streaminfo = ValoStreams('https://www.vlr.gg/team/8903/og-ldn-utd')
       linktogame = value[4]
@@ -5077,6 +5085,26 @@ async def testingspam():
           
           pass
         else:
+          if(str(enemyteam) != "TBD"):
+            eventdata = await guild.create_scheduled_event(name=name, description=description, start_time=time, end_time=end_time, entity_type=discord.enums.EntityType(3), location=linktogame)
+            f = open("ldnvaloevent.txt", "w")
+            f.write(linetocheck)
+            f.close()
+            upload_file('/ldnvaloevent.txt', 'ldnvaloevent.txt')
+            data2= await guild.fetch_scheduled_event(eventdata.id)
+            await channel.send(data2.url)
+            test = await channel2.send(str(gardenerinfo))
+            await test.add_reaction(emote)
+            f=open("valoeventsign.txt", "w")
+            f.write(str(test.id))
+            f.close()
+            upload_file('/valoeventsignup.txt', 'valoeventsign.txt')
+          else:
+            print("TBD - Valo Ldn Team")
+                              
+          
+      except:
+        if(str(enemyteam) != "TBD"):
           eventdata = await guild.create_scheduled_event(name=name, description=description, start_time=time, end_time=end_time, entity_type=discord.enums.EntityType(3), location=linktogame)
           f = open("ldnvaloevent.txt", "w")
           f.write(linetocheck)
@@ -5090,23 +5118,9 @@ async def testingspam():
           f.write(str(test.id))
           f.close()
           upload_file('/valoeventsignup.txt', 'valoeventsign.txt')
-                              
-          
-      except:
-        eventdata = await guild.create_scheduled_event(name=name, description=description, start_time=time, end_time=end_time, entity_type=discord.enums.EntityType(3), location=linktogame)
-        f = open("ldnvaloevent.txt", "w")
-        f.write(linetocheck)
-        f.close()
-        upload_file('/ldnvaloevent.txt', 'ldnvaloevent.txt')
-        data2= await guild.fetch_scheduled_event(eventdata.id)
-        await channel.send(data2.url)
-        test = await channel2.send(str(gardenerinfo))
-        await test.add_reaction(emote)
-        f=open("valoeventsign.txt", "w")
-        f.write(str(test.id))
-        f.close()
-        upload_file('/valoeventsignup.txt', 'valoeventsign.txt')
-        pass
+          pass
+        else:
+          print("TBD - Valo LDN Team")
 
       
       

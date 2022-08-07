@@ -634,7 +634,7 @@ def ValoCheck(channelDataID, pageURL):
             embed.add_field(name="Links", value="[OG LDN UTD VLR](https://www.vlr.gg/team/8903/og-ldn-utd) / [OG LDN UTD Valorant Liquipedia](https://liquipedia.net/valorant/OG_LDN_UTD)", inline=False)
         
     #return(embed)
-    return (embed, valorantTeams, valorantTeamTime, c, matchlink, dayofgame2, gameposition, tourniname, serieslength, epoch)
+    return (embed, valorantTeams, valorantTeamTime, c, matchlink, dayofgame2, gameposition, tourniname, serieslength, epoch, nameOfEnemy)
 
   except Exception as e:
     print(exc_type, fname, exc_tb.tb_lineno)
