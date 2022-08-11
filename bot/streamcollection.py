@@ -481,7 +481,7 @@ def ValoStreams(pageURL):
       m=0
       
       streams=""
-      while (m < len(headings)):
+      while (m < len(headings) and m < 8):
         streams = str(streams) + actualflags[m] + " <" + headings[m] + ">\n"
         m=m+1
 
